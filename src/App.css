@@ -1,38 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  background-image: linear-gradient(90deg, #f4f4f5, #faf7fc);
+}
+body {
+  padding: 0;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.searchResultDiv {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchResultDiv h3 {
+  color: #258d6e;
+}
+.searchResultDiv h3 a {
+  color: #1a0dab;
+  display: inline-block;
+  line-height: 16px;
+  text-decoration: none;
+}
+.searchResultDiv h3 a:hover {
+  border-bottom: 3px solid;
+}
+.searchResultDiv a:visited {
+  color: #1a0dab;
+}
+.searchResultDiv .link a {
+  text-decoration: none;
+  color: #287e44;
+}
+.searchResultDiv .link a:hover {
+  text-decoration: none;
+}
+.searchResultDiv .searchmatch {
+  font-weight: bold;
+}
+.searchResultDiv .description {
+  color: #414141;
+}
+.searchResultDiv.post {
+  border-bottom: 5px#287e44;
 }

@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+The challenge is to create a proof of concept front end application for an IATI Search Engine. We hope that beyond allowing us to appraise your technical skill this will give you a little insight into the technical side of IATI and the kind of work you could be expecting should you be successful.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the /design directory you will find two design images. The first represents a landing page showing a simple search bar with the IATI logo above it and below a Search button. The second shows how the results obtained from the search API should be displayed.
 
-## Available Scripts
+In the /data directory you'll find three .json files of example responses named by the search term for you to use as mock data.
 
-In the project directory, you can run:
+There are three fields in each search result.
 
-### `npm start`
+The first, indicated in the example repeats as "The Publisher's Name", should be populated by the field "reporting_org_narrative"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The second, indicated in the example repeats as "Activity Title As Link To Activity View", should be populated by the field "title_narrative". This should link to the url https://example.com/<iati_identifier> where <iati_identifier> is populated by the field "iati_identifier".
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The third, indicated in the example repeats with the text:
 
-### `npm test`
+"… narrative text which contains the keyword or phrase as searched for, and with that highlighted in bold, such as covid. This then serves as a preview to the descriptive text of activity the user will see if they click through from title link. Such pages will provide over 1,000,000 dynamic Web pages of rich content all linking back to IATI sites, which is the meat of any effective SEO."
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+should be populated by the field ""description_narrative". The displayed text should be limited to 400 characters. The search term should be displayed in bold, as per the design. Should value of the field contain more than 400 characters a portion with the search term included should be displayed. Any characters stripped to meet the 400 char limit should be replaced with the string "..."
 
-### `npm run build`
+Finally, the pagination as seen at the bottom of the design should be implemented.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The implementation should be suitably responsive to changes in display ratios.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Guiding Principles**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Your solution should include a README file with clear instructions
+  about how to run your software.
+- If applicable the solution must be able to build on Linux.
+- Please return your solution via email to ​alexl@devinit.org​
+  attached as a compressed directory.
+- Use whichever technologies you prefer, but try to keep the
+  implementation as simple, as readable and as lightweight as
+  possible.
+- We have expressly defined the challenge in terms of design and requirements alone, as we're looking for someone who can lead the way in terms of front end implementation.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Many thanks for your time, good luck, and should you have any questions please feel free to get in touch.**
