@@ -25,7 +25,7 @@ The implementation should be suitably responsive to changes in display ratios.
 - Your solution should include a README file with clear instructions
   about how to run your software.
 - If applicable the solution must be able to build on Linux.
-- Please return your solution via email to ​alexl@devinit.org​
+- Please return your solution via email to
   attached as a compressed directory.
 - Use whichever technologies you prefer, but try to keep the
   implementation as simple, as readable and as lightweight as
