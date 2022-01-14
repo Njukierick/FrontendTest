@@ -2,8 +2,20 @@
   margin-top: 105px;
   display: flex;
 }
+@media screen and (max-width: 1200px) {
+  .search input {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .search input {
+    width: 50%;
+  }
+}
 
 .search input {
+  margin-left: 50px;
+  margin-bottom: 50px;
   background-color: #f0f3ff;
   border: 0;
   border-radius: 55px;
@@ -12,17 +24,18 @@
   font-size: 18px;
   padding: 30px;
   height: 30px;
-  width: 500px;
+  width: 80%;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
     -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .image {
-  width: 10px;
-  height: 15px;
+  width: 70px;
+  height: 70px;
   display: flex;
   margin-bottom: 20px;
 }
 .searchIcon {
+  margin-right: 70px;
   height: 62px;
   width: 50px;
   border-bottom-right-radius: 30px;

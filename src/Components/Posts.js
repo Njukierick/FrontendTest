@@ -1,4 +1,5 @@
 import React from "react";
+import './Post.css';
 
 const Posts = ({ posts, loading }) => {
   if (loading) {
@@ -10,8 +11,9 @@ const Posts = ({ posts, loading }) => {
       {posts.map((post) => {
         return (
           <div key={post.id} className="post">
-            <h4>{post.title}</h4>
-            <p>{post.link}</p>
+            <h4>{post.reporting_org_narrative}</h4>
+            <a href=" https://example.com/ + {post.iati_identifier}">{post.title_narrative}</a>
+            <p className="description">{post.description_narrative}</p>
           </div>
         );
       })}

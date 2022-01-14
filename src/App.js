@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 import Posts from "./Components/Posts";
 import SearchBar from "./Components/SearchBar";
-import DataSets from "./Data.json";
+import DataSets from "./Components/Data.json";
 import Pagination from "./Components/Pagination";
 
 const App = () => {
@@ -13,14 +13,17 @@ const App = () => {
   const [postsPerPage] = useState(10);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      setLoading(true);
-      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-      setPosts(res.data);
-      setLoading(false);
-    };
-
-    fetchPosts();
+    setLoading(true);
+    axios
+      .get("covid.json")
+      .then((response) => {
+        console.log(response.data.response.docs);
+        setPosts(response.data.response.docs);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
 
   // Get current posts
